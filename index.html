@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Trøjborg Bryghus alkoholfri øl</title>
+    <meta name="Vi brygger alkoholfri øl med fokus på den gode kvalitet og smag. Hos os finder du alkoholfrie øl med god smag samt inspiration og viden om de sundhedsmæssige fordele"
+        content="Dette er en fiktiv hjemmeside for virksomheden Trøjborg, der sælger alkohol frie øl">
+    <meta name="keywords"
+        content="Alkoholfri øl bedst, Drinks alkoholfri øl, alkoholfri øl sundt, Alkoholfri øl med smag, Alkoholfri øl produktion, Alkoholfri øl og mad">
+
+    <!-- Generelle tags // UTF - alle de bogstaver og tegn er inde i UTF-8, -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Sanne">
+
+    <!-- initial viewport 100% // Den her betyder, at man zoomer hverken ind eller ud, hjemmesiden være scaleret til 100% i viewporten,  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- ios (I O S, det er apples software) compatibility meta tags -->
+    <meta name="apple-mobile-web-app-title" content="Trøjborg Bryghus">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <!-- Android compatibility meta tags -->
+    <meta name="mobile-web-app-capable" content="yes"> 
+    <!-- Stylesheets // alt det kosmetiske - link html tag - / <== bruges til at vælge og /Styles kigger man ind i mappen, hvor /Styles/index.css vælger den specifikke fil-->
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <link rel="icon" href="img/LOGO.png">
+    <script>
+        function toggleMenu(){
+            document.getElementById("menu").classList.toggle("show");
+        }
+    </script>
+</head>
+
+<body>
+    <nav>
+        <a href="./index.html">
+            <img class="logo" src="img/LOGO.png">
+        </a>
+
+        <div class="burger-menu" onClick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <ul class="menu" id="menu">
+            <li>
+                <a href="">Inspiration &amp; sundhed</a>
+                <ul class="dropdown">
+                    <li><a href="./InspirationSundhed.html">Alkoholfri øl, dit sunde alternativ</a></li>
+                    <li><a href="">3 drinks med alkoholfri øl</a></li>
+                    <li><a href="">Sund mad med alkoholfri øl</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Arrangementer</a>
+                <ul class="dropdown">
+                    <li><a href="">Alkoholfri øl yoga</a></li>
+                    <li><a href="">Smagsfuld fredag</a></li>
+                    <li><a href="">Workshop gastronomi og øl</a></li>
+                    <li><a href="">Rundvisning med ølsmagning</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="./VoresAlkoholefrieOel.html">Vores alkoholfrie øl</a>
+            </li>
+            <li>
+                <a href="">Om os</a>
+                <ul class="dropdown last">
+                    <li><a href="">Kontakt</a></li>
+                    <li><a href="">Åbningstider</a></li>
+                    <li><a href="./HvemErVi.html">Hvem er vi</a></li>
+                    <li><a href="">Hvordan brygger vi</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Webshop</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <main>
+        <div class="container segment segment-1">
+            <video class="video" autoplay loop muted>
+                <source src="img/forsidevideo.mp4" type="video/mp4">
+            </video>
+            <div class="content flex items-center justify-center">
+                <h1 class="title text-white font-candal">Trøjborg Bryghus</h1>
+            </div>
+        </div>
+
+        <div class="container segment segment-2">
+            <img class="background" src="img/hvemErVi.jpg" alt="Baggrund: Hvem er Trøjborg Bryghus">
+            <div class="content flex items-center">
+                <div class="side-1 text-center">
+                    <h2 class="text-white font-candal">Hvem er vi</h2>
+                    <a href="./HvemErVi.html" class="button">Læs mere</a>
+                </div>
+                <div class="side-2 flex-remaining"><!-- luft --></div>
+            </div>
+        </div>
+
+        <div class="container segment segment-3">
+            <img class="background" src="img/bgForOel.jpg" alt="Baggrund: Vores nyeste skud på stammen">
+
+            <div class="content flex items-center">
+                <div class="side-2">
+                    <img src="img/citrus.png" alt="Den nye citrus øl"/>
+                </div>
+                <div class="side-1 text-center">
+                    <h2 class="text-white font-candal">Vores nyeste<br/>skud på stammen</h2>
+                    <a href="./VoresAlkoholefrieOel.html" class="button">Se mere her</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container segment segment-4">
+            <img class="background" src="img/sundalternativt.jpg" alt="Baggrund til det sunde alkoholfrie øl-valg">
+            <div class="content flex items-center">
+                <div class="side-1 text-center">
+                    <h2 class="text-white font-candal">Alkoholfri øl<br/>dit sunde alternativ</h2>
+                    <a href="./InspirationSundhed.html" class="button">Læs artiklen</a>
+                </div>
+                <div class="side-2 flex-remaining"><!-- luft --></div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer class="bg-dark-green text-white">
+        <div class="container">
+            <div class="IconDiv text-center">
+                <img class="soMeIcon"src="img/facebook.png" alt="Besøg vores Facebook side">
+                <img class="soMeIcon" src="img/instagram.png" alt="Besøg vores Instagram">
+            </div>
+            <p class="text-center">Telefon +45 3318 1617</p>
+            <p class="text-center"><a href="mailto:trøjborgbryghus@trøjborg.dk">trøjborgbryghus@trøjborg.dk</a></p>
+            <p class="text-center pt-3 footer-menu">Privatlivspolitik - Cookiepolitik - Acceptabel brug - Regler og konkurrenceforhold - Fødevarestyrelsens smiley-rapport - Kontakt - Social Media </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

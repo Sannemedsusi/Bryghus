@@ -1,0 +1,814 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Candal&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Candal&family=Roboto:wght@300&display=swap');
+/* Reset CSS */
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
+ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	 margin: 0;
+	 padding: 0;
+	 border: 0;
+	 font-size: 100%;
+	 font: inherit;
+	 vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	 display: block;
+}
+ body {
+	 line-height: 1;
+}
+ ol, ul {
+	 list-style: none;
+}
+ blockquote, q {
+	 quotes: none;
+}
+ blockquote:before, blockquote:after, q:before, q:after {
+	 content: '';
+	 content: none;
+}
+ table {
+	 border-collapse: collapse;
+	 border-spacing: 0;
+}
+/* Variabler - så vi ikke skal huske farver og værdier :) */
+ :root {
+	 --dark-green: #406640;
+	 --light-green: #b4d398;
+	 --yellow: #ffdb7f;
+	 --sand: #e0dacb;
+	 --darkgrey: #908d8b;
+	 --grey: #5f5e5e;
+	 --black: #191918;
+	 --white: #fff;
+	 --container-max-width: 100vw;
+	/* hvilken bredde den "indre side" skal have - f.eks. 1200px eller 100% som her */
+}
+ html {
+	 font-size: 16px;
+}
+ body {
+	 background-color: var(--black);
+}
+ nav {
+	 background-color: var(--dark-green);
+	 height: 4rem;
+	 padding: 0;
+	 position: relative;
+}
+ nav .burger-menu {
+	 width: 2rem;
+	 position: absolute;
+	 right: 1.2rem;
+	 top: 0.4rem;
+	 display: none;
+}
+ nav .burger-menu div {
+	 width: 100%;
+	 height: 0.2rem;
+	 background-color: var(--white);
+	 margin: 0.4rem;
+	 border-radius: 0.125rem;
+}
+ nav ul.menu {
+	 list-style: none;
+	 display: flex;
+	 justify-content: flex-end;
+	 align-items: center;
+	 height: 100%;
+}
+ nav ul.menu li {
+	 height: 100%;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 cursor: pointer;
+	 position: relative;
+}
+ nav ul.menu li a {
+	 display: block;
+	 font-family: Arial, Helvetica, sans-serif;
+	 color: white;
+	 text-decoration: none;
+	 font-size: 0.85rem;
+	 font-weight: 300;
+	 padding: 0 1rem;
+}
+ nav ul.menu li ul.dropdown {
+	 min-width: 15rem;
+	 position: absolute;
+	 display: block;
+	 height: auto;
+	 top: 4rem;
+	 left: 0rem;
+	 display: none;
+	 z-index: 500;
+	 background-color: var(--dark-green);
+}
+ nav ul.menu li ul.dropdown.last {
+	 left: auto;
+	 right: 0;
+}
+ nav ul.menu li ul.dropdown li {
+	 justify-content: left;
+	 height: 4rem;
+}
+ nav ul.menu li ul.dropdown li a {
+	 line-height: 1.4rem;
+	 color: var(--white);
+}
+ nav ul.menu li:hover {
+	 background-color: var(--light-green);
+}
+ nav ul.menu li:hover a {
+	 color: var(--dark-green);
+}
+ nav ul.menu li:hover .dropdown {
+	 display: block;
+}
+ nav ul.menu li:hover .dropdown li:hover a {
+	 color: var(--dark-green);
+}
+/* Logo placeres ovenpå det hele med z-index 1000 så andre elementer ikke overlapper */
+ nav .logo {
+	 position: absolute;
+	 top: 0rem;
+	 left: 2rem;
+	 width: 6.5em;
+	 height: auto;
+	 z-index: 1000;
+}
+ .container {
+	 margin: 0 auto;
+	/* centrer containeren i dens omgivelser */
+	 max-width: var(--container-max-width);
+	/* Den maksimale bredde vi giver til elementerne i containen */
+	 position: relative;
+	 overflow: hidden;
+	/* position:relative giver mulighed for at absolut positionere .content senere */
+	/* Content får alt pladsen i hver .container til at lave indhold på */
+}
+ .container .video {
+	/* støtte-elementer, definerer højden af vores blokke og er baggrunden */
+	 width: 100%;
+	 height: auto;
+	 display: block;
+}
+ .container .background {
+	 width: 100%;
+	 height: auto;
+	 display: block;
+}
+ .container .content {
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+}
+ .container .title {
+	 font-size: 6rem;
+}
+ .container .title-subtext {
+	 padding-top: 4rem;
+}
+ .container.segment {
+	 min-height: 50vh;
+	 max-height: 100vh;
+}
+ .container.segment .side-1, .container.segment .side-2 {
+	/* lidt afstand på begge sider, så teksten aldrig rører kanten*/
+	 padding-left: 1rem;
+	 padding-right: 1rem;
+}
+ .container.segment .background {
+	 object-fit: cover;
+	 object-position: left 50%;
+	 width: 100%;
+	 min-height: 50vh;
+}
+ .container.segment .video {
+	 object-fit: cover;
+	 object-position: 50% 50%;
+	 width: 100%;
+	 min-height: 50vh;
+}
+ .container.segment-1 {
+	 max-height: calc(100vh - 4rem);
+	/* topbaren er 4rem - så videoen fylder hele skærmen, hvis den er 100viewheight minus 4rem*/
+}
+ .container.segment-2 .content .side-1 {
+	 width: 50%;
+}
+ .container.segment-2 .content h1, .container.segment-2 .content h2 {
+	 width: 100%;
+	 display: block;
+	 font-size: 5rem;
+	 text-align: center;
+}
+ .container.segment-3 .content .side-1 {
+	 width: 50%;
+}
+ .container.segment-3 .content .side-2 {
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 width: 50%;
+	 height: 100%;
+}
+ .container.segment-3 .content .side-2 img {
+	 display: block;
+	 width: auto;
+	 height: 95%;
+	 min-height: 48vh;
+	/* her giver vi flasken lidt mindre højde end segment har som minimum - så den aldrig rører kanterne.*/
+}
+ .container.segment-3 .content h1, .container.segment-3 .content h2 {
+	 width: 100%;
+	 display: block;
+	 font-size: 5rem;
+	 text-align: center;
+}
+ .container.segment-4 .content .side-1 {
+	 width: 50%;
+}
+ .container.segment-4 .content h1, .container.segment-4 .content h2 {
+	 font-size: 5rem;
+}
+ .container.segment .content .button {
+	 font-family: Verdana, Geneva, Tahoma, sans-serif;
+	 text-decoration: none;
+	 display: inline-block;
+	 margin-top: 1rem;
+	 font-size: 1rem;
+	 padding: 0.5rem 1rem;
+	 background: none;
+	 color: var(--yellow);
+	 border: 2px solid var(--light-green);
+	 border-radius: 0.25rem;
+	 cursor: pointer;
+}
+ .container.segment .content .button:hover {
+	 background-color: var(--light-green);
+	 color: var(--dark-green);
+}
+ footer {
+	 font-family: Arial, Helvetica, sans-serif;
+	 padding: 2rem 1rem 2rem 1rem;
+}
+ footer .footer-menu {
+	 line-height: 1.5rem;
+}
+ footer .soMeIcon {
+	 width: 3rem;
+	 height: 3rem;
+}
+ footer p {
+	 margin-top: 0.5rem;
+}
+ footer p a {
+	 color: white;
+	 text-decoration: none;
+}
+ footer p a:hover {
+	 text-decoration: underline;
+}
+/* Text sider */
+ .inner-container {
+	 max-width: 1200px;
+	 margin: 0 auto;
+	 padding: 0 1rem;
+	 padding-top: 4rem;
+	 padding-bottom: 4rem;
+	 font-size: 1.2rem;
+	 font-family: Arial, Helvetica, sans-serif;
+	 line-height: 1.6rem;
+}
+ .inner-container img.cover {
+	 margin-top: 3rem;
+	 width: 100%;
+	 height: auto;
+}
+ .inner-container .pretext {
+	 margin-bottom: 2rem;
+}
+ .inner-container h2 {
+	 font-weight: 600;
+	 font-size: 1.5rem;
+	 margin-top: 2rem;
+	 margin-bottom: 0.45rem;
+}
+ .inner-container h2:first-child {
+	 margin-top: 0;
+}
+ .inner-container h3 {
+	 font-weight: 600;
+	 text-decoration: underline;
+	 margin: 2rem 0 0.15rem 0;
+}
+ .inner-container h3:first-child {
+	 margin-top: 0;
+}
+ .inner-container .columns {
+	 column-count: 2;
+	 column-gap: 4rem;
+}
+/* Style til hver enkelt navngivne side */
+ #page-hvem-er-vi .columns {
+	 color: var(--sand);
+}
+ #page-hvem-er-vi .columns h2 {
+	 color: var(--black);
+}
+ #page-inspiration-sundhed .columns {
+	 color: var(--black);
+}
+ #page-inspiration-sundhed .columns h2 {
+	 color: var(--black);
+}
+ #page-vores-oel {
+	 overflow: hidden;
+}
+ #page-vores-oel .container.segment-3 .content .side-1 {
+	 width: 75%;
+}
+ #page-vores-oel .container.segment-3 .content .side-2 {
+	 width: 25%;
+}
+ #page-vores-oel .beer {
+	 padding: 2rem 1rem;
+	 font-size: 1.2rem;
+	 font-family: Arial, Helvetica, sans-serif;
+	 line-height: 1.6rem;
+}
+ #page-vores-oel .beer .mid {
+	 max-width: 1200px;
+	 margin: 0 auto;
+	 display: flex;
+	 flex-direction: row;
+}
+ #page-vores-oel .beer .title, #page-vores-oel .beer .product {
+	 width: calc(3*100%/5);
+	 min-height: 40vh;
+	 display: flex;
+}
+ #page-vores-oel .beer .title {
+	 flex-direction: column;
+	 align-items: start;
+	 justify-content: end;
+}
+ #page-vores-oel .beer .title h2, #page-vores-oel .beer .title h3 {
+	 font-size: 4rem;
+	 line-height: 1.2em;
+	 padding-bottom: 1rem;
+}
+ #page-vores-oel .beer .title p {
+	 padding-top: 1rem;
+	 padding-bottom: 0.5rem;
+	 font-weight: lighter;
+	 font-size: 3rem;
+}
+ #page-vores-oel .beer .product {
+	 flex-direction: column;
+}
+ #page-vores-oel .beer .product p {
+	 font-size: 1.6rem;
+	 line-height: 1.4em;
+	 font-weight: lighter;
+}
+ #page-vores-oel .beer .product .info {
+	 padding-top: 2rem;
+}
+ #page-vores-oel .beer .img {
+	 position: relative;
+	 width: calc(2 * 100% / 5 - 10px);
+}
+ #page-vores-oel .beer .img img {
+	 position: absolute;
+	 bottom: 0;
+	 width: auto;
+	 height: 200%;
+	 right: -25%;
+}
+ #page-vores-oel .beer .img img.flip {
+	 right: auto;
+	 left: -25%;
+}
+/* Større enheder */
+ @media screen and (max-width: 1023px) {
+	 .container .title {
+		 font-size: 4rem;
+	}
+	 .container.segment-2 .content h1, .container.segment-2 .content h2 {
+		 font-size: 3rem;
+	}
+	 .container.segment-3 .content h1, .container.segment-3 .content h2 {
+		 font-size: 3rem;
+	}
+	 .container.segment-4 .content h1, .container.segment-4 .content h2 {
+		 font-size: 2.5rem;
+	}
+}
+/* Mellem enheder */
+ @media screen and (max-width: 850px) {
+	 nav {
+		 height: 3rem;
+		/* I mobileview skal burger menuen vises */
+		/* Når vi er i mobile-view, skal menuen vises som en "fold ud" menu fra højre*/
+	}
+	 nav .burger-menu {
+		 display: block;
+	}
+	 nav ul.menu {
+		 display: none;
+		 position: absolute;
+		 overflow-y: auto;
+		 right: 0;
+		 top: 3rem;
+		 width: 40%;
+		 min-width: 15rem;
+		 height: 100vh;
+		 z-index: 250;
+		 background: var(--dark-green);
+	}
+	 nav ul.menu.show {
+		 display: block;
+	}
+	 nav ul.menu > li {
+		 justify-items: auto;
+		 justify-content: left;
+		 height: auto;
+		 min-height: 4rem;
+		 display: flex;
+		 flex-direction: column;
+		 text-align: left;
+		 align-items: flex-start;
+	}
+	 nav ul.menu > li > a {
+		 line-height: 4rem;
+		 height: 4rem;
+	}
+	 nav ul.menu > li ul.dropdown {
+		 width: 100%;
+		 position: static;
+		 display: block;
+		 height: auto;
+		 z-index: 500;
+		 background-color: var(--dark-green);
+	}
+	 nav ul.menu > li ul.dropdown a {
+		 margin-left: 1rem;
+	}
+	 nav .logo {
+		 position: absolute;
+		 top: 0.1rem;
+		 left: 1rem;
+		 width: 4.5em;
+		 height: auto;
+		 z-index: 1000;
+	}
+	 .container .title {
+		 font-size: 4rem;
+	}
+	 .container.segment-3 .content h1, .container.segment-3 .content h2 {
+		 font-size: 2.5rem;
+	}
+	 .container.segment-3 .content .side-2 {
+		 width: 35%;
+	}
+	 .container.segment-3 .content .side-1 {
+		 width: 65%;
+	}
+	 .container.segment.segment-4 .background {
+		 width: 110vh;
+		 object-fit: cover !important;
+		 object-position: 50% 90% !important;
+		 max-height: 50vh;
+	}
+	 .container.segment-4 .content .side-1 {
+		 width: 75%;
+	}
+	 .container.segment-4 .content h1, .container.segment-4 .content h2 {
+		 font-size: 2.5rem;
+		 padding: 0 2rem;
+	}
+	 .inner-container .columns {
+		 column-count: 1;
+		 column-gap: 4rem;
+	}
+	 #page-vores-oel .beer .title {
+		 min-height: 30vh;
+	}
+	 #page-vores-oel .beer .title h2, #page-vores-oel .beer .title h3 {
+		 font-size: 2.5rem;
+		 line-height: 1.4em;
+		 padding-bottom: 0rem;
+	}
+	 #page-vores-oel .beer .title p {
+		 font-size: 1.5rem;
+		 line-height: 1.4em;
+	}
+	 #page-vores-oel .beer .product {
+		 min-height: 30vh;
+	}
+	 #page-vores-oel .beer .product p {
+		 font-size: 1.3rem;
+	}
+	 #page-vores-oel .beer .img img {
+		 right: -8rem;
+	}
+	 #page-vores-oel .beer .img img.flip {
+		 right: auto;
+		 left: -8rem;
+	}
+}
+/* Små enheder */
+ @media screen and (max-width: 550px) {
+	 .container .title {
+		 font-size: 2.5rem;
+	}
+	 .container.segment.segment-4 .background {
+		 width: auto;
+		 object-fit: cover !important;
+		 object-position: 50% 90% !important;
+		 max-height: 50vh;
+	}
+	 .container.segment-4 .content .side-1 {
+		 width: 75%;
+	}
+	 .container.segment-4 .content h1, .container.segment-4 .content h2 {
+		 font-size: 2.5rem;
+		 padding: 0 1rem;
+	}
+	 #page-vores-oel .content .side-1 {
+		 width: 75%;
+	}
+	 #page-vores-oel .content h1, #page-vores-oel .content h2 {
+		 font-size: 1.75rem;
+		 padding: 0.1rem 0rem;
+	}
+	 #page-vores-oel .beer .title {
+		 min-height: 20vh;
+	}
+	 #page-vores-oel .beer .title h2, #page-vores-oel .beer .title h3 {
+		 font-size: 2.5rem;
+		 line-height: 1.4em;
+		 padding-bottom: 0rem;
+	}
+	 #page-vores-oel .beer .title p {
+		 font-size: 1.5rem;
+		 line-height: 1.4em;
+	}
+	 #page-vores-oel .beer .product {
+		 min-height: 20vh;
+	}
+	 #page-vores-oel .beer .product p {
+		 font-size: 1.3rem;
+	}
+	 #page-vores-oel .beer .img img {
+		 max-height: 60vh;
+	}
+	 #page-vores-oel .beer .img img.flip {
+		 right: auto;
+	}
+}
+/* Mobil enheder */
+ @media screen and (max-width: 376x) {
+	 body {
+		 display: none;
+	}
+	 #page-vores-oel {
+		 display: none;
+	}
+	 #page-vores-oel .beer .secondary {
+		 display: none;
+	}
+	 #page-vores-oel .beer .title {
+		 width: 100%;
+	}
+}
+/* Klasser der hjælper os med at style individuelle dele af content: "utility"-klasser */
+ .flex {
+	 display: flex;
+}
+ .flex-col {
+	 flex-direction: column;
+}
+/* flex retning */
+ .flex-row {
+	 flex-direction: row;
+}
+/* flex retning */
+ .items-center {
+	 align-items: center;
+}
+/* centrering af elementer i flex */
+ .justify-center {
+	 justify-content: center;
+}
+/* centrering af elementer i flex */
+ .flex-remaining {
+	 flex: 1;
+}
+/* flex:1 giver elementet al den plads der er tilbage i flex-containeren */
+ .block {
+	 display: block;
+}
+ .inline-block {
+	 display: inline-block;
+}
+/* bredde */
+ .w-auto {
+	 width: auto;
+}
+ .w-full {
+	 width: 100%;
+}
+/* bredde i halve*/
+ .w-1\/2 {
+	 width: calc(1*100%/2);
+}
+/* bredde i trediedele */
+ .w-1\/3 {
+	 width: calc(1*100%/3);
+}
+ .w-2\/3 {
+	 width: calc(2*100%/3);
+}
+/* bredde i kvarte */
+ .w-1\/4 {
+	 width: calc(1*100%/4);
+}
+ .w-2\/4 {
+	 width: calc(2*100%/4);
+}
+ .w-3\/4 {
+	 width: calc(3*100%/4);
+}
+/* bredde i femtedele */
+ .w-1\/5 {
+	 width: calc(1*100%/5);
+}
+ .w-2\/5 {
+	 width: calc(2*100%/5);
+}
+ .w-3\/5 {
+	 width: calc(3*100%/5);
+}
+ .w-4\/5 {
+	 width: calc(4*100%/5);
+}
+/* baggrunde ud fra farverne */
+ .bg-dark-green {
+	 background-color: var(--dark-green);
+}
+ .bg-light-green {
+	 background-color: var(--light-green);
+}
+ .bg-yellow {
+	 background-color: var(--yellow);
+}
+ .bg-sand {
+	 background-color: var(--sand);
+}
+ .bg-darkgrey {
+	 background-color: var(--darkgrey);
+}
+ .bg-grey {
+	 background-color: var(--grey);
+}
+ .bg-black {
+	 background-color: var(--black);
+}
+ .bg-white {
+	 background-color: white;
+}
+/* text-color ud fra farverne */
+ .text-dark-green {
+	 color: var(--dark-green);
+}
+ .text-light-green {
+	 color: var(--light-green);
+}
+ .text-yellow {
+	 color: var(--yellow);
+}
+ .text-sand {
+	 color: var(--sand);
+}
+ .text-darkgrey {
+	 color: var(--darkgrey);
+}
+ .text-grey {
+	 color: var(--grey);
+}
+ .text-black {
+	 color: var(--black);
+}
+ .text-white {
+	 color: white;
+}
+/* text-utility classes */
+ .text-left {
+	 text-align: left;
+}
+ .text-center {
+	 text-align: center;
+}
+ .text-right {
+	 text-align: right;
+}
+/* padding-utility classes */
+ .p-0\.5 {
+	 padding: 0.125rem;
+}
+ .p-1 {
+	 padding: 0.25rem;
+}
+ .p-2 {
+	 padding: 0.5rem;
+}
+ .p-3 {
+	 padding: 0.75rem;
+}
+ .p-4 {
+	 padding: 1rem;
+}
+ .p-5 {
+	 padding: 1.25rem;
+}
+ .pt-3 {
+	 padding-top: 0.75rem;
+}
+ .pb-3 {
+	 padding-top: 0.75rem;
+}
+/* margin-utilty classes */
+ .m-0\.5 {
+	 margin: 0.125rem;
+}
+ .m-1 {
+	 margin: 0.25rem;
+}
+ .m-2 {
+	 margin: 0.5rem;
+}
+ .m-3 {
+	 margin: 0.75rem;
+}
+ .m-4 {
+	 margin: 1rem;
+}
+ .m-5 {
+	 margin: 1.25rem;
+}
+ .mx-auto {
+	 margin-left: auto;
+	 margin-right: auto;
+}
+/* centrering via margin */
+/* font-size-utility classes */
+ .text-xs {
+	 font-size: 1.2rem;
+}
+ .text-sm {
+	 font-size: 1.6rem;
+}
+ .text-md {
+	 font-size: 2rem;
+}
+ .text-lg {
+	 font-size: 2.4rem;
+}
+ .text-xl {
+	 font-size: 2.8rem;
+}
+ .text-xxl {
+	 font-size: 3.2rem;
+}
+ .text-xxxl {
+	 font-size: 3.6rem;
+}
+ .text-4xl {
+	 font-size: 4rem;
+}
+ .text-5xl {
+	 font-size: 4.4rem;
+}
+/* font typer */
+ .font-candal {
+	 font-family: 'Abril Fatface', serif;
+}
+ .font-roboto {
+	 font-family: 'Roboto', sans-serif;
+}
+ .font-bold {
+	 font-weight: bold;
+}
+ .font-light {
+	 font-weight: lighter;
+}
+ .font-italic {
+	 font-style: italic;
+}
+ 

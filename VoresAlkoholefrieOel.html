@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Trøjborg Bryghus se vores nyeste varianter og udvalg</title>
+    <meta name="Hos os får du alkoholfri øl af god kvalitet og med god smag. Vi har samlet vores udvalg her"
+        content="Dette er en fiktiv hjemmeside for virksomheden Trøjborg, der sælger alkohol frie øl">
+    <meta name="keywords"
+        content="Alkoholfri øl bedst, Alkoholfri øl med smag">
+
+    <!-- Generelle tags // UTF - alle de bogstaver og tegn er inde i UTF-8, -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Sanne">
+
+    <!-- initial viewport 100% // Den her betyder, at man zoomer hverken ind eller ud, hjemmesiden være scaleret til 100% i viewporten,  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- ios (I O S, det er apples software) compatibility meta tags -->
+    <meta name="apple-mobile-web-app-title" content="Trøjborg Bryghus">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <!-- Android compatibility meta tags -->
+    <meta name="mobile-web-app-capable" content="yes"> 
+    <!-- Stylesheets // alt det kosmetiske - link html tag - / <== bruges til at vælge og /Styles kigger man ind i mappen, hvor /Styles/index.css vælger den specifikke fil-->
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <link rel="icon" href="img/LOGO.png">
+    <script>
+        function toggleMenu(){
+            document.getElementById("menu").classList.toggle("show");
+        }
+    </script>
+</head>
+
+<body>
+    <nav>
+        <a href="./index.html">
+            <img class="logo" src="img/LOGO.png">
+        </a>
+
+        <div class="burger-menu" onClick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <ul class="menu" id="menu">
+            <li>
+                <a href="">Inspiration &amp; sundhed</a>
+                <ul class="dropdown">
+                    <li><a href="./InspirationSundhed.html">Alkoholfri øl, dit sunde alternativ</a></li>
+                    <li><a href="">3 drinks med alkoholfri øl</a></li>
+                    <li><a href="">Sund mad med alkoholfri øl</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Arrangementer</a>
+                <ul class="dropdown">
+                    <li><a href="">Alkoholfri øl yoga</a></li>
+                    <li><a href="">Smagsfuld fredag</a></li>
+                    <li><a href="">Workshop gastronomi og øl</a></li>
+                    <li><a href="">Rundvisning med ølsmagning</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="./VoresAlkoholefrieOel.html">Vores alkoholfrie øl</a>
+            </li>
+            <li>
+                <a href="">Om os</a>
+                <ul class="dropdown last">
+                    <li><a href="">Kontakt</a></li>
+                    <li><a href="">Åbningstider</a></li>
+                    <li><a href="./HvemErVi.html">Hvem er vi</a></li>
+                    <li><a href="">Hvordan brygger vi</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Webshop</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <main id="page-vores-oel">
+
+        <div class="container segment segment-3">
+            <img class="background" src="img/bgForOel.jpg" alt="Baggrund: Vores nyeste skud på stammen">
+
+            <div class="content flex items-center">
+                <div class="side-2">
+                    <img src="img/citrus.png" alt="Den nye citrus øl"/>
+                </div>
+                <div class="side-1 text-center">
+                    <h2 class="font-candal text-yellow">Nyhed<br/>Citrus Squeeze Ale</h2>
+                    <h2 class="font-candal text-sand title-subtext">Se mere herunder<br/>samt andre varianter</h2>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- product 1 -->
+        <div class="beer bg-black">
+            <div class="mid">
+                <div class="title">
+                    <h2 class="text-yellow font-candal">Citrous Squeeze Ale</h2>
+                    <p class="text-sand font-roboto">Økologisk</p>
+                </div>
+            </div>
+        </div>
+        <div class="beer bg-grey">
+            <div class="mid">
+                <div class="product text-sand">
+                    <p>En hvede øl som er lys og diset i sit udseende.
+                       Duften er af citrus og med et lille anslag af kiwi.
+                       Smagen er frisk og med let sødme.</p>
+                    <div class="info">
+                        <p><span class="font-bold">Øltype</span> Ale</p>
+                        <p><span class="font-bold">Alkoholfri</span> 0,5%</p>
+                        <p><span class="font-bold">Humle</span> Perle, Saphir</p>
+                        <p><span class="font-bold">Serverings</span> temperatur 8°C</p>                        
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="img/beer-2.png" alt="Citrous Squeeze Ale">
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- product 2 -->
+        <div class="beer bg-black">
+            <div class="mid">
+                <div class="img secondary"></div>
+                <div class="title">
+                    <h2 class="text-yellow font-candal">Lime Twist Ale </h2>
+                    <p class="text-sand font-roboto">Økologisk</p>
+                </div>
+            </div>
+        </div>
+        <div class="beer bg-grey">
+            <div class="mid">
+                <div class="img">
+                    <img class="flip" src="img/beer-1.png" alt="Lime Twist Ale">
+                </div>
+                <div class="product text-sand">
+                    <p>Er en lys og fugtig Ale ikke særlig bitter. Lime og 
+                        tropefrugt præger duften og smagen med god balance.
+                        Læskende med behagelig tør finish.
+                        </p>
+                    <div class="info">
+                        <p><span class="font-bold">Øltype</span> Ale</p>
+                        <p><span class="font-bold">Alkoholfri</span> 0,5%</p>
+                        <p><span class="font-bold">Humle</span> Saphir, Simcoe</p>
+                        <p><span class="font-bold">Serverings</span> temperatur 8°C</p>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- product 3 -->
+        <div class="beer bg-black">
+            <div class="mid">
+                <div class="title">
+                    <h2 class="text-yellow font-candal">Mango Twist Ale</h2>
+                    <p class="text-sand font-roboto">Økologisk</p>
+                </div>
+            </div>
+        </div>
+        <div class="beer bg-grey">
+            <div class="mid">
+                <div class="product text-sand">
+                    <p>Er en gylden og saftig Ale lavet på lys malt. Duften af mango
+                        og fersken hviler i næsen og det samme gør smagen.
+                        Let med en smule sødme.
+                        </p>
+                    <div class="info">
+                        <p><span class="font-bold">Øltype</span> Ale</p>
+                        <p><span class="font-bold">Alkoholfri</span> 0,5%</p>
+                        <p><span class="font-bold">Humle</span> Cashmere, Saphir</p>
+                        <p><span class="font-bold">Serverings</span> temperatur 8°C</p>                        
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="img/beer-3.png" alt="Mango Twist Ale">
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- product 4 -->
+        <div class="beer bg-black">
+            <div class="mid">
+                <div class="img secondary"></div>
+                <div class="title">
+                    <h2 class="text-yellow font-candal">Malt Mist Ale </h2>
+                    <p class="text-sand font-roboto">Økologisk</p>
+                </div>
+            </div>
+        </div>
+        <div class="beer bg-grey">
+            <div class="mid">
+                <div class="img">
+                    <img class="flip" src="img/beer-4.png" alt="Malt Mist Ale">
+                </div>
+                <div class="product text-sand">
+                    <p>Er en mild og fugtig Ale med lækkert cremet skum. Den 
+                        har duft og smag af passionsfrugt, chokolade og humle. 
+                        Fyldig, blød og cremet
+                        </p>
+                    <div class="info">
+                        <p><span class="font-bold">Øltype</span> Ale</p>
+                        <p><span class="font-bold">Alkoholfri</span> 0,5%</p>
+                        <p><span class="font-bold">Humle</span> Mosaic, Simco</p>
+                        <p><span class="font-bold">Serverings</span> temperatur 8°C</p>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </main>
+
+    <footer class="bg-dark-green text-white">
+        <div class="container">
+            <div class="IconDiv text-center">
+                <img class="soMeIcon"src="img/facebook.png" alt="Besøg vores Facebook side">
+                <img class="soMeIcon" src="img/instagram.png" alt="Besøg vores Instagram">
+            </div>
+            <p class="text-center">Telefon +45 3318 1617</p>
+            <p class="text-center"><a href="mailto:trøjborgbryghus@trøjborg.dk">trøjborgbryghus@trøjborg.dk</a></p>
+            <p class="text-center pt-3 footer-menu">Privatlivspolitik - Cookiepolitik - Acceptabel brug - Regler og konkurrenceforhold - Fødevarestyrelsens smiley-rapport - Kontakt - Social Media </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

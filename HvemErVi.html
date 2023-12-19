@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Trøjborg Bryghus om os</title>
+    <meta name="hvem er vi og hvad står vi for"
+        content="Dette er en fiktiv hjemmeside for virksomheden Trøjborg, der sælger alkohol frie øl">
+    <meta name="keywords"
+        content="Alkoholfri øl bedst, Alkoholfri øl med smag, Alkoholfri øl produktion">
+
+    <!-- Generelle tags // UTF - alle de bogstaver og tegn er inde i UTF-8, -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Sanne">
+
+    <!-- initial viewport 100% // Den her betyder, at man zoomer hverken ind eller ud, hjemmesiden være scaleret til 100% i viewporten,  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- ios (I O S, det er apples software) compatibility meta tags -->
+    <meta name="apple-mobile-web-app-title" content="Trøjborg Bryghus">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <!-- Android compatibility meta tags -->
+    <meta name="mobile-web-app-capable" content="yes"> 
+    <!-- Stylesheets // alt det kosmetiske - link html tag - / <== bruges til at vælge og /Styles kigger man ind i mappen, hvor /Styles/index.css vælger den specifikke fil-->
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <link rel="icon" href="img/LOGO.png">
+    <script>
+        function toggleMenu(){
+            document.getElementById("menu").classList.toggle("show");
+        }
+    </script>
+</head>
+
+<body>
+    <nav>
+        <a href="./index.html">
+            <img class="logo" src="img/LOGO.png">
+        </a>
+
+        <div class="burger-menu" onClick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <ul class="menu" id="menu">
+            <li>
+                <a href="">Inspiration &amp; sundhed</a>
+                <ul class="dropdown">
+                    <li><a href="./InspirationSundhed.html">Alkoholfri øl, dit sunde alternativ</a></li>
+                    <li><a href="">3 drinks med alkoholfri øl</a></li>
+                    <li><a href="">Sund mad med alkoholfri øl</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Arrangementer</a>
+                <ul class="dropdown">
+                    <li><a href="">Alkoholfri øl yoga</a></li>
+                    <li><a href="">Smagsfuld fredag</a></li>
+                    <li><a href="">Workshop gastronomi og øl</a></li>
+                    <li><a href="">Rundvisning med ølsmagning</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="./VoresAlkoholefrieOel.html">Vores alkoholfrie øl</a>
+            </li>
+            <li>
+                <a href="">Om os</a>
+                <ul class="dropdown last">
+                    <li><a href="">Kontakt</a></li>
+                    <li><a href="">Åbningstider</a></li>
+                    <li><a href="./HvemErVi.html">Hvem er vi</a></li>
+                    <li><a href="">Hvordan brygger vi</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Webshop</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <main id="page-hvem-er-vi">
+
+        <div class="container segment segment-2">
+            <img class="background" src="img/hvemErVi.jpg" alt="Baggrund: Hvem er Trøjborg Bryghus">
+            <div class="content flex items-center">
+                <div class="side-1 text-center">
+                    <h1 class="text-white font-candal">Hvem er vi</h1>
+                </div>
+                <div class="side-2 flex-remaining"><!-- luft --></div>
+            </div>
+        </div>
+
+        <div class="bg-darkgrey">
+            <div class="inner-container">
+                
+                <div class="columns">
+                    <h2>Det hele startede i januar 2023</h2>
+                    <p>Til en ganske almindelig familie sammenkomst sad to fætre og talte om øl og bryggeri, som de havde gjort utallige gange. Den store passion for øl var noget, de begge havde til fælles og især bryggeriet fascinerede dem. De havde hver især gennem mange år arbejdet med bryggeri både ude i felten og hjemme, så solid erfaring og stor viden var der nok af.  </p>
+                    <p>Snakken faldt på den stigende tendens indenfor alkoholfri øl og efter kort tid, havde de to fætre besluttet at starte bryggeri med udelukkende alkoholfri øl. </p>
+                    <p>Gennem bekendte fandt de en lille hyggelig lagerbygning med lokation i Trøjborg. Der blev indkøbt inventar og processen med opstart af brygning af økologiske alkoholfrie øl med kvalitet og smag kunne endelig tage sin begyndelse. </p>
+                    
+                    <h2>Hvem er vi</h2>
+                    <p>Claus og Søren er navnene bag Trøjborg Bryggeri og de er begge oprindeligt fra området omkring Århus. I dag er de også begge bosat i og omkring Århus. </p>
+                    <p>Søren vendte for halvandet år siden hjem fra en stilling på et stort bryggeri i USA og Claus har været ansat ved Carlsberg i 10 år. Tilsammen udgør duoen en samlet erfaring på 15 år i bryggeribranchen.  </p>
+                    
+                    <h2>Mission</h2>
+                    <p>At give forbrugeren den bedste smagsoplevelse og det sundeste alternativ med økologisk alkoholfri øl gennem et lille men eksklusivt udvalg af kvalitet. </p>
+                    
+                    <h2>Vision</h2>
+                    <p>At være førende indenfor økologisk alkoholfri øl med kvalitet og god smag </p>
+                    
+                    <h2>Værdier</h2>
+                    <p>Kvalitet, Bæredygtighed, Sundhed, Fællesskab, Gennemsigtighed & Innovation. </p>
+                </div>
+
+                <img src="img/bryggere.jpg" class="cover" alt="Billede af to bryggere ved Trøjborg bryggeri"/>
+
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer class="bg-dark-green text-white">
+        <div class="container">
+            <div class="IconDiv text-center">
+                <img class="soMeIcon"src="img/facebook.png" alt="Besøg vores Facebook side">
+                <img class="soMeIcon" src="img/instagram.png" alt="Besøg vores Instagram">
+            </div>
+            <p class="text-center">Telefon +45 3318 1617</p>
+            <p class="text-center"><a href="mailto:trøjborgbryghus@trøjborg.dk">trøjborgbryghus@trøjborg.dk</a></p>
+            <p class="text-center pt-3 footer-menu">Privatlivspolitik - Cookiepolitik - Acceptabel brug - Regler og konkurrenceforhold - Fødevarestyrelsens smiley-rapport - Kontakt - Social Media </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
